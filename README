@@ -2,7 +2,14 @@ Quick installation:
 -------------------
 
 cd product/rr64x/linux
-make patchkernel KERNELDIR=/usr/src/linux-3.2.1-gentoo-r2 KERNEL_VER=3.2
+make patchkernel KERNELDIR=/usr/src/linux KERNEL_VER=3.2
+
+cd /usr/src/linux
+make oldconfig < /dev/null
+make menuconfig
+# Device Drivers > SCSI > HighPoint ... [*]
+make -j12 && make modules_install
+install_kernel_x86_64
 
 #############################################################################
 # ORIGINAL README
