@@ -1,3 +1,13 @@
+Quick installation:
+-------------------
+
+cd product/rr64x/linux
+make patchkernel KERNELDIR=/usr/src/linux-3.2.1-gentoo-r2 KERNEL_VER=3.2
+
+#############################################################################
+# ORIGINAL README
+#############################################################################
+
 RocketRAID 64x SATA Controller Linux Open Source Driver
 Copyright (C) 2008-2010 HighPoint Technologies, Inc. All rights reserved.
 
